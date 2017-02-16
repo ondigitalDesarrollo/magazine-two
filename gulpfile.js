@@ -16,13 +16,15 @@ gulp.task('default',['css'], function() {
 
 /* CSS */
 gulp.task('css', function() {
-    gulp.src('./scss/**/*.scss')
-      .pipe(sass({
-      	outputStyle: 'compress'
-      }))
-      .pipe(gulp.dest('./dist/css/'))
-      .pipe(browserSync.stream());
+    gulp.src("./dev/scss/*.scss")
+        .pipe(sass({
+          outputStyle: 'expanded'
+        }))
+        .pipe(gulp.dest("./dist/css"))
+        .pipe(browserSync.stream());
 });
+
+
 
 /* PUG */
 gulp.task('pug', function(){
