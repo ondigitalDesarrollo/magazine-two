@@ -12,6 +12,7 @@ gulp.task('default',['css'], function() {
 	gulp.watch('./dev/scss/**/*.scss', ['css']);
   gulp.watch('./dist/*html').on('change', browserSync.reload);
   gulp.watch('./dev/**/*.pug', ['pug']);
+  gulp.watch('./dist/js/*js').on('change', browserSync.reload);
 });
 
 /* CSS */
